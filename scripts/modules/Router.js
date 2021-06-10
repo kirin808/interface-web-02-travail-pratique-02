@@ -27,4 +27,12 @@ export default class Router {
 	parseHashId = (hash) => {
 		return hash.split(`#!/${this.slug}/`)[1];
 	}
+
+	resetLocation = () => {
+		history.replaceState(
+			null,
+			null,
+			window.location.pathname
+		);
+	}
 }

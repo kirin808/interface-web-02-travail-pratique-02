@@ -88,7 +88,7 @@ export default class TodoApp {
 		this.taskDAO.getTaskById($id)
 			.then(
 				data => { 
-					if(data !== "false") {
+					if(data) {
 						this.todoUI.drawDetails(
 							data.name,
 							data.importance,
@@ -96,6 +96,7 @@ export default class TodoApp {
 						)
 					} else {
 						this.router.resetLocation();
+						this.todoUI.cleanDetails();
 					}
 				}
 				

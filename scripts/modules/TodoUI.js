@@ -47,5 +47,13 @@ export default class TodoUI {
 		this.detailsDesc.textContent = (desc !== "") ? desc : "Aucune description disponible";		
 	}
 
+	cleanDetails = () => {
+		this.detailsToggle.checked = false;
+
+		this.detailsName.textContent =
+		this.detailsImportance.textContent =
+		this.detailsDesc.textContent = "";
+	}
+
 
 }

@@ -14,7 +14,6 @@ export default class TaskDAO {
 		const resp = await fetch(this.gateway, this.data)
 			.then(resp => resp.json())
 			.then(result => {
-				console.log(result);
 				payload = result;
 			});
 		return payload;
