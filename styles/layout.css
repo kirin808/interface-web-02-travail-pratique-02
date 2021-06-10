@@ -1,0 +1,236 @@
+/* Variables :::::::: */
+
+:root {
+	--gutter : 1.5rem;
+}
+
+/* Réinitialisations :::::::::: */
+* {
+	padding: 0;
+	margin: 0;
+
+	box-sizing: border-box;
+}
+
+/* Rythme vertical */
+* + :is(p, hr, ul, h1, h2, h3, h4, h5, h6, footer),
+dl > * + * {
+	margin-top: var(--gutter);
+}
+
+main > * + * {
+	margin-top: calc(var(--gutter) * 3);
+}
+
+.flow-content > * + * {
+	margin-top: var(--gutter);
+}
+
+* + li {
+	margin-top: calc(var(--gutter) * 0.7);
+}
+/**/
+
+
+img {
+	max-width: 100%;
+	display: block;
+
+	object-fit: cover;
+}
+
+
+
+body {
+	padding: var(--gutter);
+}
+
+
+main {
+	width: 60%;
+	max-width: 80ch;
+
+	
+}
+
+section:not(:nth-of-type(2)) {
+	padding: calc(var(--gutter) * .5);
+}
+/* Panneau liste affichée */
+
+/* Arrière-plan personnalisé selon la priorité */
+.taskPriority1 {
+	background-color: rgba(0, 58, 10, 0.11);
+}
+
+.taskPriority2 {
+	background-color: rgba(81, 90, 3, 0.11);
+}
+
+.taskPriority3 {
+	background-color: rgba(58, 0, 0, 0.11);
+}
+
+.taskEntry  {
+	padding: calc(var(--gutter) * .5);
+}
+
+
+.manageTask {
+	display: flex;
+	gap: var(--gutter);
+}
+
+.manageTask > * {
+	flex-basis: calc((100% / 2) - var(--gutter));
+	flex-grow: 1;
+}
+
+.taskSummary {
+	display: block;
+}
+
+.taskSummary > * {
+	display: inline-block;
+}
+
+.taskSummary > :first-child {
+	font-weight: 700;
+}
+
+.taskSummary > :last-child {
+	margin-left: var(--gutter);
+}
+
+.change-list-order {
+	display: flex;
+	gap: var(--gutter);
+	justify-content: space-between;
+}
+
+.change-list-order > * {
+	flex-basis: calc((100% / 2) - var(--gutter));
+	flex-grow: 1;
+}
+
+
+.arrow-icon {
+	display: block;
+	float: right;
+
+	margin-top: 10px;
+	
+	transition-property: transform;
+	transition-duration: 200ms;
+	transition-timing-function: ease-in;
+}
+
+.arrow-toggle:checked ~ .arrow-icon {
+	transform: rotate(180deg);
+}
+
+
+.arrow-icon > img {
+	width: 20px;
+}
+
+.details > h2 {
+	margin-top: 0;
+}
+
+.details > dl {
+	max-height: 0;
+	overflow: hidden;
+
+	transition-property: max-height, margin-top;
+	transition-duration: 300ms;
+	transition-timing-function: ease-in;
+}
+
+dt {
+	font-weight: 700;
+}
+
+.arrow-toggle:checked ~ dl {
+	max-height: 200px;
+	margin-top: var(--gutter);
+}
+
+
+/* Éléments de formulaire */
+
+/* Pour les boutons radios */
+label > input {
+	margin-right: .5em;
+}
+
+.radioInputs {
+	display: flex;
+	gap: var(--gutter);
+	justify-content: space-between;
+}
+
+input:not([type='radio']),
+textarea,
+button {
+	padding: .3em;
+
+	font-size: 1rem;
+}
+
+input:not([type='radio']),
+textarea {
+	width: 100%;
+}
+
+textarea {
+	font-family: sans-serif;
+}
+
+.field-block {
+	display: flex;
+	align-items: center;
+	gap: var(--gutter);
+
+	position: relative;
+}
+
+.field-block > * {
+	flex-basis: calc(100% / 2 - var(--gutter));
+	flex-grow: 1;
+
+	margin-top: var(--gutter);
+}
+
+.field-block small {
+	position: absolute;
+	right: 10px;
+	bottom: -40px;
+
+	padding: 4px 12px;
+
+	border-radius: 4px;
+}
+
+
+/* Messages d'erreur */
+.error-msg {
+	margin-top: calc(var(--gutter) * .2);
+
+	font-size: .7em;
+	font-style: oblique;
+}
+
+
+
+
+/* Utilitaires :::::::: */
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+  }
