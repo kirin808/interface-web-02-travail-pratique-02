@@ -13,6 +13,11 @@ a {
 	text-decoration: none;
 }
 
+
+body {
+	font-family: sans-serif;
+}
+
 /* Arrière-plan personnalisé selon la priorité */
 .taskPriority1 {
 	background-color: rgba(0, 58, 10, 0.11);
