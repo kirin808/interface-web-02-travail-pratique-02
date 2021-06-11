@@ -111,6 +111,8 @@ export default class TodoApp {
 			.then(resp => {
 				if(resp.result === "true") {
 					this.todoUI.removeTask(panel);
+					this.router.resetLocation();
+					this.todoUI.cleanDetails();
 				}
 			});
 	}
