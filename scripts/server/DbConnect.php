@@ -8,9 +8,9 @@
 
 		public function __construct() {
 			$this->hostname = "localhost";
-			$this->database = "piw2_todo_list";
-			$this->username = "root";
-			$this->password = "";
+			$this->database = "todo_list";
+			$this->username = "the_fetchor";
+			$this->password = "kunaiinouï";
 			
 			try {
 				$this->c = new \PDO("mysql:host=$this->hostname;dbname=$this->database", $this->username, $this->password);

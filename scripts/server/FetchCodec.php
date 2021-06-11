@@ -6,6 +6,7 @@
 	require_once("{$data->model}DAO.php");
 
 	$class = "{$data->model}DAO";
+	
 	$dao = new $class();
 
 	$method = $data->action;

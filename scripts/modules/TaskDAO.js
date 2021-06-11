@@ -1,6 +1,6 @@
 export default class TaskDAO {
-	gateway = "scripts/server/FetchCodec.php";
-	model = "task";
+	gateway = "./scripts/server/FetchCodec.php";
+	model = "Task";
 	data = {
 		method: "POST",
 		headers: {

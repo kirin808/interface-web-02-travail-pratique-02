@@ -48,11 +48,11 @@ export default class TodoUI {
 	}
 
 	cleanDetails = () => {
-		this.detailsToggle.checked = false;
-
 		this.detailsName.textContent =
 		this.detailsImportance.textContent =
 		this.detailsDesc.textContent = "";
+
+		this.detailsToggle.checked = false;
 	}
 
 
